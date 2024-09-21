@@ -29,13 +29,13 @@ function nextImage() {
 setInterval(nextImage, 3000); 
 
 
-document.getElementById('loginBtn').addEventListener('click', function() {
-    alert('Login');
-});
+//document.getElementById('loginBtn').addEventListener('click', function() {
+   // alert('Login');
+//});//
 
-document.getElementById('registerBtn').addEventListener('click', function() {
-    alert('Register');
-});
+//document.getElementById('registerBtn').addEventListener('click', function() {
+  //  alert('Register');//
+//});//
 
 
 document.getElementById('contactForm').addEventListener('submit', function(event) {
@@ -44,7 +44,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     const formData = new FormData(this);
     const data = Object.fromEntries(formData.entries());
 
-    fetch('https://miportafolio-wh47.onrender.com/send', {
+    fetch('https://myportfolio-ipo0.onrender.com/send', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
