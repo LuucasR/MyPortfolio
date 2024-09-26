@@ -17,22 +17,25 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: url(./assest/th.jpg);
+  background-image: url(../img/th.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   transition: all 1s ease-in-out;
   z-index: 10;
 }
+
 .intro-content {
   text-align: center;
 }
+
 .intro-content p {
   font-size: 18px;
   text-shadow: -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000,
     1px 1px 0 #000000;
   margin: 10px 0;
 }
+
 .intro-content h1 {
   font-size: 96px;
   letter-spacing: 5px;
@@ -40,10 +43,12 @@ body {
   text-shadow: -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000,
     1px 1px 0 #000000;
 }
+
 .logo img {
   width: 10%;
   border-radius: 50%;
 }
+
 #playBtn {
   background: none;
   border: 2px solid #ffffff;
@@ -54,10 +59,12 @@ body {
   margin-top: 20px;
   transition: all 0.3s ease;
 }
+
 #playBtn:hover {
   background-color: #ffffff;
   color: #000000;
 }
+
 /* Fin Introduccion */
 
 /* Inicio Main */
@@ -66,6 +73,7 @@ body {
   position: absolute;
   transition: top 1s ease-in-out;
 }
+
 .hidden {
   display: none;
   opacity: 0;
@@ -73,6 +81,7 @@ body {
   transform: translateY(50px);
   transition: opacity 0.8s ease, transform 0.8s ease, visibility 0s 0.8s;
 }
+
 #content.visible {
   top: 0;
   opacity: 1;
@@ -80,6 +89,7 @@ body {
   transform: translateY(0);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
+
 /* Fin Main */
 
 /*//////////////////////////////////////////////////////////////////////////////////////*/
@@ -367,14 +377,98 @@ footer {
   bottom: 0;
 }
 
-@media (max-width: 768px) {
-    .galeria .galeria-imagenes {
-        flex-direction: column; /* Apila las imágenes verticalmente */
-        align-items: center; /* Centra las imágenes */
-    }
 
-    .galeria .galeria-imagenes .contenedorimagenes {
-        margin: 15px 0; /* Ajusta el margen para el apilamiento */
-        width: 90%; /* Establece un ancho para las imágenes */
-    }
+@media (max-width: 768px) {
+  .intro-content h1 {
+    font-size: 48px; 
+  }
+
+
+  #playBtn {
+    padding: 8px 20px;
+    font-size: 16px;
+  }
+
+
+  header {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  header nav ul li {
+    display: block;
+    text-align: center;
+    margin: 5px 0;
+  }
+
+  header .redes img {
+    height: 25px;
+    width: 25px;
+  }
+
+
+  .galeria .galeria-imagenes {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+
+  .galeria .galeria-imagenes .contenedorimagenes img {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+
+  .contacto {
+    max-width: 90%;
+    padding: 10px;
+  }
+
+  .contacto input,
+  .contacto textarea {
+    font-size: 14px;
+  }
+
+
+  footer {
+    position: relative;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .intro-content h1 {
+    font-size: 72px;
+  }
+
+  .galeria .galeria-imagenes {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .galeria .galeria-imagenes .contenedorimagenes img {
+    width: 90%;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .intro-content h1 {
+    font-size: 36px;
+  }
+
+  .intro-content p {
+    font-size: 14px;
+  }
+
+
+  #playBtn {
+    padding: 6px 15px;
+    font-size: 14px;
+  }
+
+  .contacto input,
+  .contacto textarea {
+    font-size: 12px;
+  }
 }
