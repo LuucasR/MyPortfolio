@@ -1,116 +1,186 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lucas Rodriguez</title>
-    <link rel="stylesheet" href="public/styles.css">
-    <link rel="icon" href="./public/assest/logo.jpg" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Satisfy&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Playwrite+DE+Grund:wght@100..400&family=Satisfy&display=swap" rel="stylesheet">
-</head>
-<body>
-  <!--inicio-->
+    <link rel="stylesheet" href="public/style.css" />
+    <!-- <link rel="stylesheet" href="public/styles.css" /> -->
+    <link rel="icon" href="./public/assest/logo.jpg" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Playwrite+DE+Grund:wght@100..400&family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--inicio-->
     <section id="intro">
-        <div class="intro-content">
-            <div class="logo"><h1>UdevZone<img src="./public/assest/logo.jpg" alt=""></div></h1>
-            <p>Lucas Rodriguez | Programmer</p>
-            <p>Buenos Aires | Argentina</p>
-            <button id="playBtn">Enter</button>
+      <div class="intro-content">
+        <div class="logo">
+          <h1>UdevZone<img src="./public/assest/logo.jpg" alt="" /></h1>
         </div>
+        <p>Lucas Rodriguez | Programmer</p>
+        <p>Buenos Aires | Argentina</p>
+        <button id="playBtn">Enter</button>
+      </div>
     </section>
-
-    <!-- show-->
-    <section id="content" class="hidden">
-          <!--Header-->
-    <header>
+    <!-- End Inicio -->
+    <main id="content" class="hidden">
+      <header>
+        <!-- hago el menu con las redes, los logos y los links a las secciones -->
+        <div class="navLogo">
+          <img src="img/logo.jpg" alt="" />
+        </div>
         <nav>
-            <ul>
-                <li><button id="loginBtn">Login</button></li>
-                <li><button id="registerBtn">Register</button></li>
-            </ul>
+          <ul>
+            <li><a href="#idproyectos">Proyectos</a></li>
+            <li><a href="#idgaleria">Galería</a></li>
+            <li><a href="#idcontacto">Contacto</a></li>
+          </ul>
         </nav>
-    </header>
-        <section id="carousel">
-            <div class="carousel-container">
-            </div>
-                <div class="carousel-text">
-                    <h2>Hello</h2>
-                    <p>Explore my projects and learn more about my work in the world of video game development.</p>
+        <div class="redes">
+          <a href="https://www.instagram.com/luuqitas_/"
+            ><img src="img/instagram.png" alt=""
+          /></a>
+          <a href="https://www.linkedin.com/in/lucas-rodriguez-47a4b6236/"
+            ><img src="img/linkedin.png" alt=""
+          /></a>
+          <a href="https://github.com/LuucasR"
+            ><img src="img/github.png" alt=""
+          /></a>
+        </div>
+      </header>
+      <!-- uso la primer seccion para hacer una descripcion mia -->
+      <section id="sobre-mi">
+        <div class="Contactarme">
+          <h1>Lucas Rodriguez</h1>
+          <a href="https://www.linkedin.com/in/lucas-rodriguez-47a4b6236/"
+            >linkedin</a
+          >
+          <a href="https://www.instagram.com/luuqitas_/"> instagram</a>
+          <a href="https://github.com/LuucasR"> github</a>
+          <div class="contactbttn">
+            <a href="#idcontacto"><button>CONTACT ME</button></a>
+          </div>
+        </div>
+        <div class="MiFoto"><img src="/img/lucas.jpg" alt="" /></div>
+        <div class="sobre-mitxt">
+          <h2>About me</h2>
+          <p>
+            With over 3 years of experience in Unreal Engine, I am dedicated to
+            creating immersive and exciting gaming experiences. At 30 years old,
+            my passion for video game development drives me to explore new
+            technologies and techniques. I enjoy facing creative and technical
+            challenges, always looking to improve myself and take my projects to
+            the next level. In addition to developing video games, I am
+            interested in various areas of development, which allows me to have
+            a comprehensive approach to my projects.
+          </p>
+          <a href="#idgaleria">Learn more</a>
+        </div>
+      </section>
+      <!-- empiezo la seccion de los proyectos -->
+      <section id="idproyectos" class="proyectos">
+        <h3>Projects</h3>
+        <article>
+          <p>Here are some of my completed and ongoing projects</p>
+        </article>
+      </section>
 
-                </div>
-            </div>
-        </section>
+      <section id="idgaleria" class="galeria">
+        <div class="galeria-imagenes">
+          <div class="contenedorimagenes">
+            <h3>HOPE</h3>
+            <br />
+            <img src="img/image1.jpg" alt="Imagen de un juego desarrollado" />
+            <p>
+              A multiplayer horror game where players must complete challenging
+              objectives, such as unhinging a demon on an isolated farm. The
+              game's AI is able to listen to players' actions and decisions,
+              adapting in real-time: it can start hunting them down or
+              strategically move away, adding a unique layer of tension and
+              strategy to the game. Although it is only 90% complete, with the
+              addition of final sounds and tweaks, it offers an immersive and
+              chilling experience for fans of the genre.
+            </p>
+            <button>download demo</button>
+          </div>
+          <div class="contenedorimagenes">
+            <h3>SecretForest and Ferapet</h3>
+            <br />
+            <img src="img/image2.jpg" alt="Imagen de un juego desarrollado" />
+            <p>
+              I am currently part of a development team at a company dedicated
+              to the creation of SecretForest and Ferapet. Secretforest, an
+              MMORPG game. In my role, I am in charge of implementing and
+              optimizing the combat system and managing the storage of
+              information in the database, as well as overseeing the
+              configuration and maintenance of the server instances. For
+              Ferapet, I develop the session system, the creature capture system
+              (feras), the Ferapedia, as well as the inventory and the world
+              item drops and chests system. Due to a confidentiality agreement,
+              I cannot disclose images or media from either project. Website
+              link SecretForest
+            </p>
+            <button>Web Page</button>
+          </div>
+          <div class="contenedorimagenes">
+            <h3>Roblox mod</h3>
+            <br />
+            <img src="img/image3.jpg" alt="Imagen de un juego desarrollado" />
+            <p>
+              I created a fun game for my daughter where she can spawn
+              AI-controlled characters that will follow her around the terrain.
+              The AIs are easy to summon and move dynamically, adapting to the
+              environment. Additionally, the player can modify their speed to
+              adjust the gameplay experience. This game is not only
+              entertaining, but also encourages creativity and learning through
+              interaction with the AI.
+            </p>
+            <button>download demo</button>
+          </div>
+          <div class="mmorpg">
+            <p>
+              I am working on a personal project to develop an MMORPG that will
+              allow players to register their accounts both from my portfolio
+              and from within the game. In this game, players will be able to
+              transform into animals, dominate them and capture them, either
+              through combat or in a strategic manner. This project is an
+              opportunity to combine all my frontend and backend skills,
+              implementing a complete system that covers account creation, user
+              management and gameplay experience. Through this development, I
+              seek to demonstrate my technical and creative capabilities in
+              creating an immersive and functional environment.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- terminando agrego el formulario de contacto en una nueva seccion -->
+      <section id="idcontacto" class="contacto">
+        <form id="contactForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
 
-        <!-- aboutmy-->
-        <section id="about" class="aboutme">
-          <!--  <h2>About me</h2> -->
-            <p>With over 3 years of experience in Unreal Engine, I am dedicated to creating immersive and exciting gaming experiences. At 30 years old, my passion for video game development drives me to explore new technologies and techniques. I enjoy facing creative and technical challenges, always looking to improve myself and take my projects to the next level. In addition to developing video games, I am interested in various areas of development, which allows me to have a comprehensive approach to my projects.</p>
-        </section>
+          <label for="email">E-Mail:</label>
+          <input type="email" id="email" name="email" required />
 
-        <!-- Sección de Proyectos -->
-        <section id="projects">
-            <h2>My projects:</h2>
-            <div class="projects-gallery">
-                <!-- Proyectos aquí -->
-                <div class="project-item">
-                    <div class="proyecto-One">
-                        <div class="carousel">
-                            <img src="./public/assest/image1.jpg" alt="Imagen 1" class="carousel-image">
-                            <img src="./public/assest/image2.jpg" alt="Imagen 2" class="carousel-image">
-                            <img src="./public/assest/image3.jpg" alt="Imagen 3" class="carousel-image">
-                        </div>
-                        <div class="text-proyecto-One">
-                            <h3><a href="https://store.steampowered.com/app/2684140/HOPE/">Hope<img src="./public/assest/Steam.png" alt=""></a></h3>
-                            <p>A multiplayer horror game where players must complete challenging objectives, such as unhinging a demon on an isolated farm. The game's AI is able to listen to players' actions and decisions, adapting in real-time: it can start hunting them down or strategically move away, adding a unique layer of tension and strategy to the game. Although it is only 90% complete, with the addition of final sounds and tweaks, it offers an immersive and chilling experience for fans of the genre.</p>
-                            <button id="downloadDemo"><a href="https://drive.usercontent.google.com/download?id=1bJSSTSuwWlbYcG73Odmb3ZprJShmuYTf&export=download&authuser=0">download demo</a></button>
-                        </div>
-                    </div>
-                </div>
-                    <h3><a href="https://zelcar.games/">SecretForest and Ferapet</a></h3>
-                    <p>I am currently part of a development team at a company dedicated to the creation of SecretForest and Ferapet. Secretforest, an MMORPG game. In my role, I am in charge of implementing and optimizing the combat system and managing the storage of information in the database, as well as overseeing the configuration and maintenance of the server instances.
-                        For Ferapet, I develop the session system, the creature capture system (feras), the Ferapedia, as well as the inventory and the world item drops and chests system. Due to a confidentiality agreement, I cannot disclose images or media from either project. Website link <a href="https://www.secretforestworld.com/">SecretForest</a></p>
-                </div>
-                <div class="project-item">
-                    <h3>My portfolio game</h3>
-                    <p>I am working on a personal project to develop an MMORPG that will allow players to register their accounts both from my portfolio and from within the game. In this game, players will be able to transform into animals, dominate them and capture them, either through combat or in a strategic manner. This project is an opportunity to combine all my frontend and backend skills, implementing a complete system that covers account creation, user management and gameplay experience. Through this development, I seek to demonstrate my technical and creative capabilities in creating an immersive and functional environment.</p>
-                </div>
-            </div>
-        </section>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
 
-        <!-- Sección de Contacto -->
-
-        
-        <section id="contact">
-            <h2>Contact</h2>
-
-            </div>
-            <form id="contactForm">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                
-                <button type="submit">Send</button>
-            </form>
-            <div class="social-buttons">
-                <a href="https://www.linkedin.com/in/lucas-rodriguez-47a4b6236/" target="_blank" class="social-button">
-                    <img src="./public/assest/linkedin.png" alt="LinkedIn">
-                </a>
-                <a href="https://www.instagram.com/luuqitas_/" target="_blank" class="social-button">
-                    <img src="./public/assest/instagram.png" alt="Instagram">
-                </a>
-                <a href="https://github.com/LuucasR" target="_blank" class="social-button">
-                    <img src="./public/assest/github.png" alt="GitHub">
-                </a>
-        </section>
-
+          <button type="submit">Send</button>
+        </form>
+      </section>
+      <!-- use el footer para mostrar mi nombre -->
+    </main>
+    <footer>
+      <p>© 2024 Lucas Rodriguez. Todos los derechos reservados.</p>
+    </footer>
+    <!-- Scripts -->
     <script src="./public/script.js"></script>
-
-</body>
+    <!-- End Scripts -->
+  </body>
 </html>
-
