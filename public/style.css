@@ -366,3 +366,15 @@ footer {
   width: 100%;
   bottom: 0;
 }
+
+@media (max-width: 768px) {
+    .galeria .galeria-imagenes {
+        flex-direction: column; /* Apila las imágenes verticalmente */
+        align-items: center; /* Centra las imágenes */
+    }
+
+    .galeria .galeria-imagenes .contenedorimagenes {
+        margin: 15px 0; /* Ajusta el margen para el apilamiento */
+        width: 90%; /* Establece un ancho para las imágenes */
+    }
+}
