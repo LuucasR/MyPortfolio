@@ -38,6 +38,7 @@ body {
 
 .intro-content h1 {
   font-size: 96px;
+  font-family: "Playwrite DE Grund", cursive;
   letter-spacing: 5px;
   color: #ffffff;
   text-shadow: -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000,
@@ -106,6 +107,7 @@ header {
 
 header nav {
   margin-left: auto;
+  font-family: "Playwrite DE Grund", cursive;
 }
 
 header .navLogo img {
@@ -173,6 +175,7 @@ section {
   padding: 20px 0;
 }
 
+
 #sobre-mi .Contactarme,
 .sobre-mitxt {
   display: flex;
@@ -184,10 +187,18 @@ section {
   margin-bottom: auto;
   font-size: 14px;
 }
+p{
+  font-family: "Playwrite DE Grund", cursive;
+  font-size: 15px;
+}
+.sobre-mitxt h2{
+  font-family: 'Dancing Script';
+  font-size: 50px;
+}
 
 #sobre-mi .Contactarme h1 {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 40px;
+  font-family: 'Dancing Script';
+  font-size: 50px;
   border-bottom: 2px solid rgb(191, 170, 110);
 }
 
@@ -231,8 +242,8 @@ section {
 #sobre-mi .MiFoto img {
   flex-wrap: wrap;
   border-radius: 50px;
-  border-bottom: 3px solid rgba(210, 212, 214, 0.315);
-  border-right: 5px solid rgba(210, 212, 214, 0.363);
+  border-bottom: 3px solid rgba(2, 87, 172, 0.315);
+  border-right: 5px solid rgba(2, 87, 172, 0.315);
 }
 
 #sobre-mi .sobre-mitxt {
@@ -245,6 +256,7 @@ section {
 
 .proyectos h3 {
   color: rgb(191, 170, 110);
+  font-family: "Playwrite DE Grund", cursive;
 }
 
 .proyectos {
@@ -283,8 +295,8 @@ section {
 
 .galeria .galeria-imagenes .contenedorimagenes img {
   width: 100%;
-  border-bottom: 3px solid rgba(210, 212, 214, 0.315);
-  border-right: 5px solid rgba(210, 212, 214, 0.363);
+  border-bottom: 3px solid rgba(2, 87, 172, 0.315);
+  border-right: 5px solid rgba(2, 87, 172, 0.315);
 }
 
 .galeria .galeria-imagenes .contenedorimagenes button {
@@ -302,9 +314,6 @@ section {
 }
 
 .galeria .galeria-imagenes .mmorpg {
-  text-align: center;
-  justify-content: center;
-  align-items: center;
   margin: 50px;
   padding: 50px;
   background-color: #00000048;
@@ -391,14 +400,16 @@ footer {
 
 
   header {
-    flex-direction: column;
     margin: 0;
   }
-
+header nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
   header nav ul li {
-    display: block;
     text-align: center;
-    margin: 5px 0;
   }
 
   header .redes img {
@@ -431,7 +442,7 @@ footer {
 
 
   footer {
-    position: relative;
+  
   }
 }
 
