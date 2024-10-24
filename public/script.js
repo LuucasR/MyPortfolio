@@ -152,7 +152,7 @@ document.getElementById('likeBtn').addEventListener('click', async function() {
         // Actualizar el contador de "Me gusta" en el frontend
         const responseLikes = await fetch('https://myportfolio-ipo0.onrender.com/');
         const likeData = await responseLikes.json();
-        document.getElementById('likeCount').innerText = 'Me gusta: ' + likeData.total_likes;
+        document.getElementById('likeCount').innerText = 'Total like: ' + likeData.total_likes;
 
     } catch (error) {
         console.error('Error al agregar Me gusta:', error);
