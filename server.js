@@ -83,7 +83,7 @@ app.post('/register', (req, res) => {
 //////////////////////////likes///////////////////////////////
 
   // Ruta para obtener el número de "Me gusta"
-app.get('/get-likes', (req, res) => {
+app.get('/', (req, res) => {
     const query = 'SELECT total_likes FROM likes WHERE id = 1';
     
     db.query(query, (err, result) => {
