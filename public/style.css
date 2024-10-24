@@ -98,11 +98,12 @@ body {
 /*//////////////////////////////////////////////////////////////////////////////////////*/
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   color: white;
   text-align: center;
   margin: 20px;
+
 }
 
 header nav {
@@ -113,7 +114,6 @@ header nav {
 header .navLogo img {
   height: 70px;
   border-radius: 20px;
-  justify-content: left;
 }
 
 header .navLogo img:hover {
@@ -390,6 +390,31 @@ button:hover {
 }
 
 
+
+
+
+
+/* Estilos para el botón de "Me gusta" */
+
+#likeBtn {
+  padding: 10px 20px;
+  background-color:rgb(191, 170, 110);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#likeBtn:hover {
+  background-color: #1e301f;
+}
+
+/* Estilo para el contador de "Me gusta" */
+#likeCount {
+  margin-top: 20px;
+  font-size: 18px;
+  color: rgb(191, 170, 110);
+}
 
 
 /*//////////////////////////////////////////////////////////////////////////////////////*/

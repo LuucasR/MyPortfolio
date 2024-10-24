@@ -114,7 +114,7 @@ document.getElementById('registroForm').addEventListener('submit', async functio
         // Mostrar el resultado en el HTML
         const resultado = document.getElementById('resultado');
         if (data.message === 'User registered successfully!') {
-            resultado.innerText = 'Registro exitoso. Redirigiendo a la descarga...';
+            resultado.innerText = 'Registration successful. Redirecting to download...';
             
             // Redirigir al enlace de descarga después de 2.5 segundos
             setTimeout(() => {
@@ -127,3 +127,43 @@ document.getElementById('registroForm').addEventListener('submit', async functio
         document.getElementById('resultado').innerText = 'Error al registrar el usuario';
     }
 });
+
+
+
+//////////////////////////MeGusta///////////////////////////////
+
+
+
+// Evento para manejar el clic en el botón de "Me gusta"
+document.getElementById('likeBtn').addEventListener('click', async function() {
+    try {
+        const response = await fetch('https://myportfolio-ipo0.onrender.com/like', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        
+        const data = await response.json();
+        if (data.message === 'Like added successfully') {
+            alert('¡Thanks for your Like!');
+        }
+
+        // Actualizar el contador de "Me gusta" en el frontend
+        const responseLikes = await fetch('https://myportfolio-ipo0.onrender.com/get-likes');
+        const likeData = await responseLikes.json();
+        document.getElementById('likeCount').innerText = 'Me gusta: ' + likeData.total_likes;
+
+    } catch (error) {
+        console.error('Error al agregar Me gusta:', error);
+    }
+});
+
+// Cargar el número de "Me gusta" al iniciar la página
+async function loadLikes() {
+    const response = await fetch('https://myportfolio-ipo0.onrender.com/get-likes');
+    const data = await response.json();
+    document.getElementById('likeCount').innerText = 'Me gusta: ' + data.total_likes;
+}
+
+loadLikes();

@@ -79,3 +79,30 @@ app.post('/register', (req, res) => {
     });
   });
   
+
+//////////////////////////likes///////////////////////////////
+
+  // Ruta para obtener el número de "Me gusta"
+app.get('/get-likes', (req, res) => {
+    const query = 'SELECT total_likes FROM likes WHERE id = 1';
+    
+    db.query(query, (err, result) => {
+        if (err) {
+            res.status(500).json({ error: 'Error obteniendo los Me gusta' });
+        } else {
+            res.status(200).json(result[0]);
+        }
+    });
+});
+
+app.post('/like', (req, res) => {
+    const query = 'UPDATE likes SET total_likes = total_likes + 1 WHERE id = 1';
+    
+    db.query(query, (err, result) => {
+        if (err) {
+            res.status(500).json({ error: 'Error updating likes' });
+        } else {
+            res.status(200).json({ message: 'Sucess add like' });
+        }
+    });
+});
