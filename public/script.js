@@ -150,7 +150,7 @@ document.getElementById('likeBtn').addEventListener('click', async function() {
         }
 
         // Actualizar el contador de "Me gusta" en el frontend
-        const responseLikes = await fetch('https://myportfolio-ipo0.onrender.com/get-likes');
+        const responseLikes = await fetch('https://myportfolio-ipo0.onrender.com/');
         const likeData = await responseLikes.json();
         document.getElementById('likeCount').innerText = 'Me gusta: ' + likeData.total_likes;
 
@@ -161,9 +161,9 @@ document.getElementById('likeBtn').addEventListener('click', async function() {
 
 // Cargar el número de "Me gusta" al iniciar la página
 async function loadLikes() {
-    const response = await fetch('https://myportfolio-ipo0.onrender.com/get-likes');
+    const response = await fetch('https://myportfolio-ipo0.onrender.com/');
     const data = await response.json();
-    document.getElementById('likeCount').innerText = 'Me gusta: ' + data.total_likes;
+    document.getElementById('likeCount').innerText = 'Likes: ' + data.total_likes;
 }
 
 loadLikes();
