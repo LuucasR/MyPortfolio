@@ -66,3 +66,64 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     });
 });
 
+
+
+// Obtener elementos del DOM
+var modal = document.getElementById('miModal');
+var btn = document.getElementById('registrarseBtn');
+var span = document.getElementsByClassName('close')[0];
+
+// Cuando el usuario hace clic en el botón, se abre la ventana modal
+btn.onclick = function() {
+    modal.style.display = 'block';
+}
+
+// Cuando el usuario hace clic en la 'x', se cierra la ventana modal
+span.onclick = function() {
+    modal.style.display = 'none';
+}
+
+// Cuando el usuario hace clic fuera de la ventana modal, se cierra
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+}
+
+// Enviar el formulario usando JavaScript
+document.getElementById('registroForm').addEventListener('submit', async function(event) {
+    event.preventDefault();  // Evita que la página se recargue
+
+    // Obtener los datos del formulario
+    const nombre = document.getElementById('nombre').value;
+    const correo = document.getElementById('correo').value;
+    const contraseña = document.getElementById('contraseña').value;
+
+    // Enviar la solicitud POST a tu API
+    try {
+        const response = await fetch('https://myportfolio-ipo0.onrender.com/register', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ nombre, correo, contraseña })
+        });
+
+        const data = await response.json();
+
+        // Mostrar el resultado en el HTML
+        const resultado = document.getElementById('resultado');
+        if (data.message === 'User registered successfully!') {
+            resultado.innerText = 'Registro exitoso. Redirigiendo a la descarga...';
+            
+            // Redirigir al enlace de descarga después de 2.5 segundos
+            setTimeout(() => {
+                window.location.href = 'https://drive.google.com/file/d/1bJSSTSuwWlbYcG73Odmb3ZprJShmuYTf/view';  // Cambia este enlace por el de tu demo
+            }, 2500);  // 2 segundos de espera antes de redirigir
+        } else {
+            resultado.innerText = data.message || 'Registro fallido';
+        }
+    } catch (error) {
+        document.getElementById('resultado').innerText = 'Error al registrar el usuario';
+    }
+});

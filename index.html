@@ -151,6 +151,23 @@
             <p>
               I am a person passionate about development, always looking for new opportunities to learn and improve. I strive to contribute all my knowledge and talent with the aim of optimizing both projects and the work environment. If I am faced with something I don't know how to do, I do not hesitate to investigate and learn to fulfill my tasks in the best possible way. My focus is on continuous improvement, working with determination and commitment in each challenge.
             </p>
+                        <!-- Botón para abrir la ventana modal -->
+    <button id="registrarseBtn">Sign up for the demo</button>
+
+    <!-- Ventana modal -->
+    <div id="miModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Registro de Usuario</h2>
+            <form id="registroForm">
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                <input type="email" id="correo" name="correo" placeholder="Correo" required>
+                <input type="password" id="contraseña" name="contraseña" placeholder="Contraseña" required>
+                <button type="submit">Register</button>
+            </form>
+            <p id="resultado"></p>
+        </div>
+    </div>
           </div>
         </div>
       </section>

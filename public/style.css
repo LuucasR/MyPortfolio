@@ -319,6 +319,78 @@ p{
   background-color: #00000048;
   border-radius: 20px;
 }
+/*   EMPIEZA REGISTRO PARA LA DEMO    */
+
+/* Estilos para el botón */
+#registrarseBtn {
+  padding: 15px 25px;
+  background-color: rgb(191, 170, 110);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 20px;
+}
+
+#registrarseBtn:hover {
+  background-color: rgb(191, 170, 110);
+}
+
+/* Estilos para la ventana modal */
+.modal {
+  display: none;  /* Oculta el modal por defecto */
+  width: 100%;
+  height: 100%;
+}
+
+.modal-content {
+  width: 30%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Estilos para el formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+button {
+  padding: 10px;
+  background-color: rgb(191, 170, 110);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Estilo del botón de cerrar */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
 
 /*//////////////////////////////////////////////////////////////////////////////////////*/
 /*/////////////////////////////////EMPIEZA FORMULARIO///////////////////////////////////*/

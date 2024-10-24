@@ -40,3 +40,42 @@ const PORT = process.env.PORT || 10000;
 app.listen(PORT, () => {
     console.log(`Servidor en ejecución en el puerto ${PORT}`);
 });
+
+
+//////// BASE DE DATOS PARA EL JUEGO ///////////////
+
+const mysql = require('mysql2');
+
+
+const db = mysql.createConnection({
+  host: '54.80.216.7',   
+  user: 'lucas',         
+  password: 'admin',    
+  database: 'mi_juego'   
+});
+
+db.connect((err) => {
+  if (err) {
+    console.error('Error connecting to the database:', err);
+    return;
+  }
+  console.log('Connected to MySQL database');
+});
+
+//////////////////////////primer solicitud///////////////////////////////
+
+app.post('/register', (req, res) => {
+    const { nombre, correo, contraseña } = req.body;
+  
+    const query = 'INSERT INTO usuarios (nombre, correo, contraseña) VALUES (?, ?, ?)';
+  
+    db.query(query, [nombre, correo, contraseña], (err, result) => {
+      if (err) {
+        console.error('Error registering user:', err);
+        res.status(500).json({ error: 'Error registering user' });
+        return;
+      }
+      res.status(201).json({ message: 'User registered successfully!' });
+    });
+  });
+  
