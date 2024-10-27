@@ -65,11 +65,11 @@ db.connect((err) => {
 //////////////////////////primer solicitud///////////////////////////////
 
 app.post('/register', (req, res) => {
-    const { nombre, correo, contraseña } = req.body;
+    const { nombre, correo, pass } = req.body;
   
-    const query = 'INSERT INTO usuarios (nombre, correo, contraseña) VALUES (?, ?, ?)';
+    const query = 'INSERT INTO usuarios (nombre, correo, pass) VALUES (?, ?, ?)';
   
-    db.query(query, [nombre, correo, contraseña], (err, result) => {
+    db.query(query, [nombre, correo, pass], (err, result) => {
       if (err) {
         console.error('Error registering user:', err);
         res.status(500).json({ error: 'Error registering user' });

@@ -97,7 +97,7 @@ document.getElementById('registroForm').addEventListener('submit', async functio
     // Obtener los datos del formulario
     const nombre = document.getElementById('nombre').value;
     const correo = document.getElementById('correo').value;
-    const contraseña = document.getElementById('contraseña').value;
+    const pass = document.getElementById('pass').value;
 
     // Enviar la solicitud POST a tu API
     try {
@@ -106,7 +106,7 @@ document.getElementById('registroForm').addEventListener('submit', async functio
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ nombre, correo, contraseña })
+            body: JSON.stringify({ nombre, correo, pass })
         });
 
         const data = await response.json();
