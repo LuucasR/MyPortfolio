@@ -51,7 +51,10 @@ const db = mysql.createConnection({
   host: '54.80.216.7',   
   user: 'lucas',         
   password: 'admin',    
-  database: 'mi_juego'   
+  database: 'mi_juego',
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0
 });
 
 db.connect((err) => {
