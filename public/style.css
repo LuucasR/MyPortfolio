@@ -271,7 +271,6 @@ p{
 }
 
 .galeria .galeria-imagenes {
-  display: flex;
   background-color: #333;
   justify-content: center;
   flex-wrap: wrap;
@@ -283,7 +282,7 @@ p{
 
 .galeria .galeria-imagenes .contenedorimagenes {
   text-align: center;
-  margin: 15px 40px 0 40px;
+ /* margin: 15px 40px 0 40px;*/
   padding-bottom: 15px;
   border-bottom: 3px solid rgb(191, 170, 110);
   flex: 1 1 300px;
@@ -293,11 +292,25 @@ p{
   margin: 40px;
 }
 
-.galeria .galeria-imagenes .contenedorimagenes img {
-  width: 100%;
-  border-bottom: 3px solid rgba(2, 87, 172, 0.315);
-  border-right: 5px solid rgba(2, 87, 172, 0.315);
+.galeria .galeria-imagenes .contenedorimagenes .sampleimages{
+display: flex;
+width: 75%;
+height: 430px;
 }
+
+.galeria .galeria-imagenes .contenedorimagenes .sampleimages img {
+  width: 0px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: .8;
+  transition: .5s ease;
+  }
+  .galeria .galeria-imagenes .contenedorimagenes .sampleimages img:hover{
+    cursor: crosshair;
+    width: 60%;
+    opacity: 1;
+    filter: contrast(120%);
+  }
 
 .galeria .galeria-imagenes .contenedorimagenes button {
   padding: 10px;
@@ -394,7 +407,7 @@ button:hover {
 
 
 
-/* Estilos para el botón de "Me gusta" */
+/* Estilos para el botón de "Me gusta" 
 
 #likeBtn {
   padding: 10px 20px;
@@ -537,10 +550,6 @@ header nav{
     font-size: 14px;
   }
 
-
-  footer {
-  
-  }
 }
 
 

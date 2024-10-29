@@ -152,7 +152,7 @@ document.getElementById('likeBtn').addEventListener('click', async function() {
         // Actualizar el contador de "Me gusta" en el frontend
         const responseLikes = await fetch('https://myportfolio-ipo0.onrender.com/');
         const likeData = await responseLikes.json();
-        document.getElementById('likeCount').innerText = 'Total like: ' + likeData.total_likes;
+        document.getElementById('likeCount').innerText = likeData.total_likes;
 
     } catch (error) {
         console.error('Error al agregar Me gusta:', error);
@@ -163,7 +163,7 @@ document.getElementById('likeBtn').addEventListener('click', async function() {
 async function loadLikes() {
     const response = await fetch('https://myportfolio-ipo0.onrender.com/');
     const data = await response.json();
-    document.getElementById('likeCount').innerText = 'Likes: ' + data.total_likes;
+    document.getElementById('likeCount').innerText =  data.total_likes;
 }
 
 loadLikes();
