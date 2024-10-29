@@ -6,7 +6,7 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: rgb(44, 45, 50);
+  background-color: rgb(0, 0, 0);
   color: rgb(210, 212, 214);
 }
 
@@ -173,8 +173,11 @@ section {
   margin: 0 auto;
   width: 100%;
   padding: 20px 0;
+  background-image: url(../img/uewp.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-
 
 #sobre-mi .Contactarme,
 .sobre-mitxt {
@@ -187,6 +190,40 @@ section {
   margin-bottom: auto;
   font-size: 14px;
 }
+
+section .Contactarme, .MiFoto, .sobre-mitxt {
+  opacity: 0; /* Invisible al inicio */
+  transform: scale(0.8); /* Escala inicial más pequeña */
+  animation: fadeInScale 0.8s ease-out forwards; /* Animación de entrada */
+  padding: 20px;
+  width: 80%;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+/* Retrasos escalonados para cada sección */
+section .Contactarme:nth-child(1) {
+  animation-delay: 0.2s;
+}
+section .MiFoto:nth-child(2) {
+  animation-delay: 0.4s;
+}
+section .sobre-mitxt:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+/* Definición de la animación de escala y opacidad */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1); /* Escala final en tamaño normal */
+  }
+}
+
 p{
   font-family: "Playwrite DE Grund", cursive;
   font-size: 15px;
@@ -263,7 +300,7 @@ p{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #333;
+  background-color: #000000;
   margin: 0 auto;
   padding: 40px;
   flex-direction: column;
@@ -271,7 +308,7 @@ p{
 }
 
 .galeria .galeria-imagenes {
-  background-color: #333;
+  background-color: #000000;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -286,6 +323,21 @@ p{
   padding-bottom: 15px;
   border-bottom: 3px solid rgb(191, 170, 110);
   flex: 1 1 300px;
+}
+.galeria .galeria-imagenes .contenedorimagenes .hp{
+  padding: 20px;
+  background-image: url(../img/bghp.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.galeria .galeria-imagenes .contenedorimagenes .sf{
+  padding: 20px;
+  background-image: url(../img/bgsf.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .galeria .galeria-imagenes .contenedorimagenes p {
@@ -330,7 +382,7 @@ height: 430px;
   margin: 50px;
   padding: 50px;
   background-color: #00000048;
-  border-radius: 20px;
+  border: 3px solid rgb(191, 170, 110);
 }
 /*   EMPIEZA REGISTRO PARA LA DEMO    */
 
@@ -441,6 +493,7 @@ button:hover {
   background: #00000048;
   border-radius: 8px;
   font-family: Arial, sans-serif;
+  border: 3px solid rgb(191, 170, 110);
 }
 
 .contacto form {
