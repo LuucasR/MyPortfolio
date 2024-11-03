@@ -6,7 +6,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
+const mysql = require('mysql2');
 
 const transporter = nodemailer.createTransport({
     service: 'gmail', 
@@ -43,7 +43,7 @@ app.listen(PORT, () => {
 
 //////// BASE DE DATOS PARA EL JUEGO ///////////////
 
-const mysql = require('mysql2');
+
 
 
 const db = mysql.createConnection({
